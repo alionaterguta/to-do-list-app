@@ -16,7 +16,7 @@ if ($('#input').val() === '') {
 
 //2. Crossing out an item from the list of items:
 li.on('dblclick', function (){
-    li.addClass('strike');
+    li.toggleClass('strike');
 });
 
 //3(i). Adding the delete button "X": 
@@ -31,4 +31,7 @@ crossOutButton.on('click', function (){
 
 // 4. Reordering the items: 
 $('#list').sortable();
+
+//5. Input text dissapear once 'Add' button clicked and item is added to the list of items:
+$('#input').val('');
 }
